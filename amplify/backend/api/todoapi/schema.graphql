@@ -1,0 +1,19 @@
+type Todo @model {
+  id: ID!
+  userID: String!
+  name: String!
+  due: String
+  done: Boolean
+  comments: [Comment] @connection(keyName: "byTodo", fields: ["id"])
+}
+
+type Comment @model @key(name: "byTodo", fields: ["todoID"]) {
+  id: ID!
+  content: String
+  todoID: ID!
+}
+
+type Subscription {
+  onCommentByTodoId(todoId: ID!): Comment
+    @aws_subscribe(mutations: ["createComment"])
+}
