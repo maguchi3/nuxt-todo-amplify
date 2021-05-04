@@ -9,7 +9,7 @@
       >
         <v-list-item
           :input-value="toDo.done"
-          active-class="textDone"
+          color="grey"
         >
           <v-btn
             icon
@@ -67,8 +67,5 @@ export default defineComponent({
 <style scoped>
   .item-link {
     text-decoration: none;
-  }
-  .textDone {
-    color: darkgray;
   }
 </style>
