@@ -48,7 +48,6 @@ import useToDoList from '../composables/useToDoList'
 import ToDoListKey from '~/composables/keys/useToDoListKey'
 import { ToDoListStore } from '@/composables/useToDoList'
 import EditMenu from './EditMenu.vue'
-import { computed } from '@vue/composition-api'
 
 export default defineComponent({
   components: { EditMenu },
