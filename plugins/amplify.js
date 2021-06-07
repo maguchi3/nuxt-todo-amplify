@@ -1,7 +1,6 @@
 import Vue from "vue";
-import Amplify, { Auth } from "aws-amplify";
+import Amplify from "aws-amplify";
 import "@aws-amplify/ui-vue";
-// import awsExports from "../aws-exports";
 
 Amplify.configure({
   aws_project_region: process.env.AWS_PROJECT_REGION,
